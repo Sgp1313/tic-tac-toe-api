@@ -48,3 +48,15 @@ def check_for_winner(board: list, player_id: str) -> bool:
             return True
 
     return False
+
+
+def print_board(board: list) -> None:
+    '''
+    Prints the baord in console to watch the game.
+    '''
+    print("\n GAME BOARD: \n")
+    print(board[0][0], "|", board[0][1], "|", board[0][2])
+    print("------------------")
+    print(board[1][0], "|", board[1][1], "|", board[1][2])
+    print("------------------")
+    print(board[2][0], "|", board[2][1], "|", board[2][2], "\n")

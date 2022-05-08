@@ -6,12 +6,13 @@ from time import sleep
 
 app = FastAPI()
 
-''' Game start '''
+# Game init
 board = utils.create_empty_board()
-# players   "X"   "O"
+# Players   "X"   "O"
 players = [None, None] 
 turn = None
 winner = None
+utils.print_board(board)
 
 
 @app.get("/registry", tags=["tic-tac-toe"])

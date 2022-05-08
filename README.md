@@ -11,6 +11,6 @@ Then install the requirements using pip:
 
 Finally, to run the API locally:  
 > `$ cd app`  
-> `$ uvicorn main:app --reload`  
+> `$ uvicorn main:app`  
 
 Once your API is running, you can check the documentation at: http://127.0.0.1:8000/docs#/ .

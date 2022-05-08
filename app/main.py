@@ -61,7 +61,7 @@ def register_player(name: str) -> any:
 
 
 @app.get("/turn/{player_id}", tags=["tic-tac-toe"])
-def get_turn_of_player_by_id(player_id: str) -> bool:
+def get_player_turn(player_id: str) -> bool:
     
     if player_id == "X" and turn == "X":
         return True

@@ -95,7 +95,11 @@ def get_board():
 
     global board
 
-    return board
+    board_string = board[0][0] + board[0][1] + board[0][2] \
+                    + board[1][0] + board[1][1] + board[1][2] \
+                    + board[2][0] + board[2][1] + board[2][2]
+
+    return board_string
 
 
 @app.post("/move/{player_id}/{row}/{column}", tags=["tic-tac-toe"])
@@ -114,9 +118,11 @@ def make_move(player_id: str, row: int, column: int) -> bool:
 
         if x_has_won:
             winner = "X"
+            turn = None
             print("\n\nGAME OVER, winner: X\n\n")
         else:
             winner = "O"
+            turn = None
             print("\n\nGAME OVER, winner: O\n\n")
 
     #Changes current turn

@@ -5,12 +5,12 @@
 
 def create_empty_board() -> list:
     '''
-    Creates an empty 3x3 tictactoe board, filled with None values.
+    Creates an empty 3x3 tictactoe board, filled with "-" as default values.
     '''
 
     board = []
     for i in range(3):
-        board.append([None] * 3)
+        board.append(['-'] * 3)
 
     return board
 
@@ -56,7 +56,7 @@ def print_board(board: list) -> None:
     '''
     print("\n GAME BOARD: \n")
     print(board[0][0], "|", board[0][1], "|", board[0][2])
-    print("------------------")
+    print("----------")
     print(board[1][0], "|", board[1][1], "|", board[1][2])
-    print("------------------")
+    print("----------")
     print(board[2][0], "|", board[2][1], "|", board[2][2], "\n")
